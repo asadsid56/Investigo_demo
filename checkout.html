@@ -9,7 +9,7 @@
     <!-- #favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
     <!-- #title -->
-    <title>Investigo &dash; Transaction</title>
+    <title>Investigo &dash; Withdraw</title>
     <!-- #keywords -->
     <meta name="keywords" content="Invest, Earn, Return" />
     <!-- #description -->
@@ -38,6 +38,70 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
+
+<style>
+    .project-box {
+        background-color: white;
+        height: 200px;
+        width: 200px;
+        padding: 5px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .checkout-box {
+        background-color: white;
+        height: 220px;
+        width: 250px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .checkout-box img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        padding-top: 10px;
+    }
+
+    .checkout-box p {
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #13216e;
+        color: 4e0dff;
+        font-style: normal;
+        margin: 10px;
+    }
+
+    .checkout-box span {
+        position: absolute;
+        font-size: 20px;
+        left: 65px;
+        top: -20px;
+    }
+
+    .invest-method , .invest-package , .invest-project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .payment-box {
+        height: 100px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .form-check-input:checked {
+        background-color: #4e0dff;
+        border-color: #4e0dff;
+    }
+
+</style>
 
 <body>
 
@@ -89,9 +153,8 @@
                     <div class="dashboard-language">
                         <select class="select-dashboard-language">
                             <option value="english">En</option>
-                            <option value="australia">Aus</option>
-                            <option value="germany">GER</option>
-                            <option value="argentina">Arg</option>
+                            <option value="australia">Nl</option>
+                            <option value="germany">Fr</option>
                         </select>
                     </div>
                     <a href="account.html" class="profile">
@@ -103,152 +166,159 @@
     </header>
     <!-- ==== #dashboard header end ==== -->
 
-    <!-- ==== dashboard section start ==== -->
-    <div class="dashboard section__space__bottom">
+    <section style="padding-top: 115px;">
         <div class="container">
-            <div class="dashboard__area">
-                <div class="row">
-                    <div class="col-xxl-3">
-                        <div class="sidebar">
-                            <a href="javascript:void(0)" class="close__sidebar">
-                                <i class="fa-solid fa-xmark"></i>
-                            </a>
-                            <div class="sidenav__wrapper">
-                                <ul>
-                                    <li>
-                                        <a href="dashboard.html">
-                                            <img src="assets/images/icons/dashboard.png" alt="Dashboard" /> Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="investment.html">
-                                            <img src="assets/images/icons/investments.png" alt="Investments" />
-                                            Investments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="transaction.html" class="sidenav__active">
-                                            <img src="assets/images/icons/transactions.png" alt="Transactions" />
-                                            Transactions
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="withdraw.html">
-                                            <img src="assets/images/icons/withdraw.png" alt="Withdraw" /> Withdraw
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="account.html">
-                                            <img src="assets/images/icons/account.png" alt="Account" /> Account
-                                        </a>
-                                    </li>
-                                </ul>
-                                <hr />
-                                <ul class="logout">
-                                    <li>
-                                        <a href="login.html">
-                                            <img src="assets/images/icons/logout.png" alt="Logout" /> Logout
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="sidenav__wrapper sidenav__footer">
-                                <h6>Last Login</h6>
-                                <hr />
-                                <div class="sidenav__time">
-                                    <p class="secondary"><img src="assets/images/icons/calendar.png" alt="Calendar" />
-                                        02.01.2022</p>
-                                    <p class="secondary">15:48:13</p>
-                                </div>
-                            </div>
+            <div class="intro mb-3">
+                <h3>Check out</h3>
+                <h6>You’re almost there! Complete your order</h6>
+                <hr>
+                <h5 class="mb-3">1. Choose your Package</h5>
+            </div>
+            <div class="checkout-wrapper py-3">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
+                        <div class="checkout-box shadow p-3">
+                            <span class="badge rounded-pill bg-danger">Exclusive</span>
+                            <img src="assets/images/property/pack-01.png" alt="pack">
+                            <p class="text-center">250 €</p>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                         </div>
                     </div>
-                    <div class="col-xxl-9">
-                        <div class="main__content">
-                            <div class="collapse__sidebar">
-                                <h4>Dashboard</h4>
-                                <a href="javascript:void(0)" class="collapse__sidebar__btn">
-                                    <i class="fa-solid fa-bars-staggered"></i>
-                                </a>
-                            </div>
-                            <div class="main__content-dashboard">
-                                <div class="breadcrumb-dashboard">
-                                    <h5>Transactions</h5>
-                                    <div>
-                                        <a href="index.html">Home</a>
-                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                        <a href="javascript:void(0)">Transactions</a>
-                                    </div>
-                                </div>
-                                <div class="investment-table investment-table-two">
-                                    <div class="intro">
-                                        <h5>Transactions</h5>
-                                        <h6>Total Number of Transactions <span>(10)</span></h6>
-                                    </div>
-                                    <div class="table-wrapper">
-                                        <table>
-                                            <tr>
-                                                <th>Project</th>
-                                                <th>Amount Invested</th>
-                                                <th>Payment Type</th>
-                                                <th>Date / Time</th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img src="assets/images/table-img.png" alt="Investment" />
-                                                    A19, Vilnius
-                                                </td>
-                                                <td>$500.00</td>
-                                                <td>Paypal</td>
-                                                <td>18.03.2022</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img src="assets/images/table-img.png" alt="Investment" />
-                                                    A19, Vilnius
-                                                </td>
-                                                <td>$500.00</td>
-                                                <td>Visa</td>
-                                                <td>18.03.2022</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img src="assets/images/table-img.png" alt="Investment" />
-                                                    A19, Vilnius
-                                                </td>
-                                                <td>$500.00</td>
-                                                <td>American Express</td>
-                                                <td>18.03.2022</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img src="assets/images/table-img.png" alt="Investment" />
-                                                    A19, Vilnius
-                                                </td>
-                                                <td>$500.00</td>
-                                                <td>Maestro</td>
-                                                <td>18.03.2022</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img src="assets/images/table-img.png" alt="Investment" />
-                                                    A19, Vilnius
-                                                </td>
-                                                <td>$500.00</td>
-                                                <td>Paypal</td>
-                                                <td>18.03.2022</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
+                        <div class="checkout-box shadow p-3">
+                            <span class="badge rounded-pill bg-danger">Exclusive</span>
+                            <img src="assets/images/property/pack-02.png" alt="pack">
+                            <p class="text-center">500 €</p>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
+                        <div class="checkout-box shadow p-3">
+                            <span class="badge rounded-pill bg-danger">Popular</span>
+                            <img src="assets/images/property/pack-03.png" alt="pack">
+                            <p class="text-center">1000 €</p>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
+                        <div class="checkout-box shadow p-3">
+                            <span class="badge rounded-pill bg-danger">Business</span>
+                            <img src="assets/images/property/pack-04.png" alt="pack">
+                            <p class="text-center">5000+ €</p>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                         </div>
                     </div>
                 </div>
             </div>
+        
+           <div class="choose-project">
+            <h5 class="mb-3">2. Choose your Investment Project</h5>
+            <div class="row py-3">
+                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                    <div class="project-box shadow p-3"></div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                    <div class="project-box shadow p-3"></div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                    <div class="project-box shadow p-3"></div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                    <div class="project-box shadow p-3"></div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                    <div class="project-box shadow p-3"></div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                    <div class="project-box shadow p-3"></div>
+                </div>
+               
+           </div>
+
+           <div class="select-payment-method">
+            <h5 class="mb-3">3. Select Payment Method</h5>
+            <div class="row py-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
+                    <div class="payment-box shadow p-3 mb-5 rounded">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">Credit Card</label><br>
+                            <img src="assets/images/checkout" alt="payment">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
+                    <div class="payment-box shadow p-3 mb-5 rounded">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">PayPal</label><br>
+                            <img src="assets/images/paypal.webp" alt="paypal">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
+                    <div class="payment-box shadow p-3 mb-5 rounded">
+                        <div>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">Google Pay</label><br>
+                            <img src="assets/images/googlepay.webp" alt="googlepay">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           </div>
+
+          <form class="mb-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input input--secondary">
+                                <label for="card-name">Name on card</label>
+                                <input type="text" name="card-name" required="required">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input input--secondary">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" name="card-number" required="required">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input input--secondary">
+                                <label for="expiry-date">Expiry date</label>
+                                <input type="text" name="expiry-date" required="required">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input input--secondary">
+                                <label for="cvc-code">CVC code</label>
+                                <input type="text" name="cvc-code" required="required">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="group alt__brin">
+                        <h5>Features</h5>
+                        <hr>
+                    </div>
+                </div>
+              </div>
+          </form>
+             
+         
+             
+            </div>
         </div>
-    </div>
-    <!-- ==== #dashboard section end ==== -->
+    </section>
+
+
+
+
+
+
 
     <!-- ==== footer section start ==== -->
     <footer class="footer dashboard-footer pos__rel over__hi">
@@ -373,7 +443,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- ==== #footer section end ==== -->
 
     <!-- Scroll To Top -->
