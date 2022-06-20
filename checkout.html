@@ -40,6 +40,11 @@
 </head>
 
 <style>
+    .choose-project {
+        min-height: 330px;
+        width: 100%;
+    }
+
     .project-box {
         background-color: white;
         height: 200px;
@@ -53,7 +58,6 @@
         background-color: white;
         height: 220px;
         width: 250px;
-        padding: 10px;
         border-radius: 10px;
         text-align: center;
         position: relative;
@@ -63,7 +67,7 @@
         height: 100px;
         width: 100px;
         border-radius: 50%;
-        padding-top: 10px;
+        margin-top: 10px;
     }
 
     .checkout-box p {
@@ -83,10 +87,13 @@
         top: -20px;
     }
 
-    .invest-method , .invest-package , .invest-project {
+    .invest-method,
+    .invest-package,
+    .invest-project {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 2rem;
     }
 
     .payment-box {
@@ -101,6 +108,12 @@
         border-color: #4e0dff;
     }
 
+    .project-box .project-img {
+        height: 200px;
+        width: 200px;
+        padding: 5px;
+        border-radius: 15px;
+    }
 </style>
 
 <body>
@@ -168,12 +181,15 @@
 
     <section style="padding-top: 115px;">
         <div class="container">
-            <div class="intro mb-3">
+            <div class="intro my-lg-5">
                 <h3>Check out</h3>
                 <h6>You’re almost there! Complete your order</h6>
                 <hr>
-                <h5 class="mb-3">1. Choose your Package</h5>
             </div>
+            <h5 class="my-3">1. Choose your Package</h5>
+
+            <!-- Checkout Package -->
+
             <div class="checkout-wrapper py-3">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
@@ -181,7 +197,8 @@
                             <span class="badge rounded-pill bg-danger">Exclusive</span>
                             <img src="assets/images/property/pack-01.png" alt="pack">
                             <p class="text-center">250 €</p>
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label for="classic"></label>
+                            <input class="form-check-input" type="radio" name="package" id="classic" value="250">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
@@ -189,7 +206,8 @@
                             <span class="badge rounded-pill bg-danger">Exclusive</span>
                             <img src="assets/images/property/pack-02.png" alt="pack">
                             <p class="text-center">500 €</p>
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label for="elite"></label>
+                            <input class="form-check-input" type="radio" name="package" id="elite" value="500">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
@@ -197,7 +215,8 @@
                             <span class="badge rounded-pill bg-danger">Popular</span>
                             <img src="assets/images/property/pack-03.png" alt="pack">
                             <p class="text-center">1000 €</p>
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label for="ultimate"></label>
+                            <input class="form-check-input" type="radio" name="package" id="ultimate" value="1000">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-12 invest-package">
@@ -205,112 +224,150 @@
                             <span class="badge rounded-pill bg-danger">Business</span>
                             <img src="assets/images/property/pack-04.png" alt="pack">
                             <p class="text-center">5000+ €</p>
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label for="premium"></label>
+                            <input class="form-check-input" type="radio" name="package" id="premium" value="5000">
                         </div>
                     </div>
                 </div>
             </div>
-        
-           <div class="choose-project">
-            <h5 class="mb-3">2. Choose your Investment Project</h5>
-            <div class="row py-3">
-                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
-                    <div class="project-box shadow p-3"></div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
-                    <div class="project-box shadow p-3"></div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
-                    <div class="project-box shadow p-3"></div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
-                    <div class="project-box shadow p-3"></div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
-                    <div class="project-box shadow p-3"></div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
-                    <div class="project-box shadow p-3"></div>
-                </div>
-               
-           </div>
 
-           <div class="select-payment-method">
-            <h5 class="mb-3">3. Select Payment Method</h5>
-            <div class="row py-3">
-                <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
-                    <div class="payment-box shadow p-3 mb-5 rounded">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                            <label class="form-check-label" for="exampleRadios1">Credit Card</label><br>
-                            <img src="assets/images/checkout" alt="payment">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
-                    <div class="payment-box shadow p-3 mb-5 rounded">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                            <label class="form-check-label" for="exampleRadios1">PayPal</label><br>
-                            <img src="assets/images/paypal.webp" alt="paypal">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
-                    <div class="payment-box shadow p-3 mb-5 rounded">
-                        <div>
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                            <label class="form-check-label" for="exampleRadios1">Google Pay</label><br>
-                            <img src="assets/images/googlepay.webp" alt="googlepay">
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-           </div>
+            <!-- Checkout Investment Project -->
 
-          <form class="mb-5">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="input input--secondary">
-                                <label for="card-name">Name on card</label>
-                                <input type="text" name="card-name" required="required">
-                            </div>
+            <div class="choose-project">
+                <h5 class="my-3">2. Choose your Investment Project</h5>
+                <div class="row py-3">
+                    <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                        <div class="project-box">
+                            <h6 class="text-center">Real Estate</h6>
+                            <img src="assets/images/checkout-img/one.png" alt="project-one" class="project-img">
+                            <label for="Real Estate"></label>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="real_estate"
+                                value="real-estate">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="input input--secondary">
-                                <label for="card-number">Card Number</label>
-                                <input type="text" name="card-number" required="required">
-                            </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                        <div class="project-box">
+                            <h6 class="text-center">Telecommunication</h6>
+                            <img src="assets/images/checkout-img/two.png" alt="project-one" class="project-img">
+                            <label for="telecommunication"></label>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="telecommunication"
+                                value="telecommunication">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="input input--secondary">
-                                <label for="expiry-date">Expiry date</label>
-                                <input type="text" name="expiry-date" required="required">
-                            </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                        <div class="project-box">
+                            <h6 class="text-center">Transport</h6>
+                            <img src="assets/images/checkout-img/three.png" alt="project-one" class="project-img">
+                            <label for="transport"></label>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="transport"
+                                value="transport">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="input input--secondary">
-                                <label for="cvc-code">CVC code</label>
-                                <input type="text" name="cvc-code" required="required">
-                            </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                        <div class="project-box">
+                            <h6 class="text-center">Agriculture</h6>
+                            <img src="assets/images/checkout-img/four.png" alt="project-one" class="project-img">
+                            <label for="agriculture"></label>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="agriculture"
+                                value="agriculture">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                        <div class="project-box">
+                            <h6 class="text-center">Extraction, mining</h6>
+                            <img src="assets/images/checkout-img/five.png" alt="project-one" class="project-img">
+                            <label for="mine"></label>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="mine"
+                                value="mine">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 invest-project">
+                        <div class="project-box">
+                            <h6 class="text-center">Hotel</h6>
+                            <img src="assets/images/checkout-img/six.png" alt="project-one" class="project-img">
+                            <label for="hotel"></label>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="hotel"
+                                value="hotel">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="group alt__brin">
-                        <h5>Features</h5>
-                        <hr>
-                    </div>
-                </div>
-              </div>
-          </form>
-             
-         
-             
             </div>
+
+            <!-- Payment Method  -->
+
+            <div class="select-payment-method">
+                <h5 class="my-3">3. Select Payment Method</h5>
+                <div class="row py-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
+                        <div class="payment-box shadow p-3">
+                            <div class="form-check">
+                                <label class="form-check-label" for="credit-card">Credit Card</label><br>
+                                <input class="form-check-input" type="radio" name="payment" id="credit-card" value="credit-card">
+                                <img src="assets/images/checkout" alt="payment">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
+                        <div class="payment-box shadow p-3">
+                            <div class="form-check">
+                                <label class="form-check-label" for="paypal">PayPal</label><br>
+                                <input class="form-check-input" type="radio" name="payment" id="paypal" value="paypal">
+                                <img src="assets/images/paypal.webp" alt="paypal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 invest-method">
+                        <div class="payment-box shadow p-3">
+                            <div>
+                                <label class="form-check-label" for="googlepay">Google Pay</label><br>
+                                <input class="form-check-input" type="radio" name="payment" id="googlepay" value="googlepay">
+                                <img src="assets/images/googlepay.webp" alt="googlepay">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <form class="mb-5">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input input--secondary">
+                                    <label for="card-name">Name on card</label>
+                                    <input type="text" name="card-name" required="required">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input input--secondary">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" name="card-number" required="required">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input input--secondary">
+                                    <label for="expiry-date">Expiry date</label>
+                                    <input type="text" name="expiry-date" required="required">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input input--secondary">
+                                    <label for="cvc-code">CVC code</label>
+                                    <input type="text" name="cvc-code" required="required">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="group alt__brin">
+                            <h5>Features</h5>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </section>
 
